@@ -1,7 +1,7 @@
 import convict from 'convict';
 
 const config = convict({
-    value: {
+    list: {
     }
 });
 

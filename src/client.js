@@ -12,33 +12,19 @@ const client = mozaik => {
     mozaik.loadApiConfig(config);
 
     const methods = {
-        value(params) {
+        list(params) {
             const {
                 url,
-                pathCurrent,
-                pathChangeRate,
-                pathLastUpdated
+                pathText
             } = params;
 
             return request.get(url)
                 .promise()
                 .then(res => {
                     const json = JSON.parse(res.text);
-                    const current = pathCurrent
-                        ? jp.query(json, pathCurrent)
-                        : json.current;
-                    const changeRate = pathChangeRate
-                        ? jp.query(json, pathChangeRate)
-                        : json.changeRate;
-                    const lastUpdated = pathLastUpdated
-                        ? jp.query(json, pathLastUpdated)
-                        : json.lastUpdated;
+                    const texts = jp.query(json, pathText);
                     
-                    return {
-                        current,
-                        changeRate,
-                        lastUpdated
-                    };
+                    return { items: texts };
                 })
                 .catch(err => {
                     console.error(err, err.stack);

@@ -1,10 +1,10 @@
 {
-  "name": "mozaik-ext-value",
-  "version": "0.0.2",
-  "description": "Mozaik value widgets",
+  "name": "mozaik-ext-list",
+  "version": "0.0.1",
+  "description": "Mozaik list widgets",
   "repository": {
     "type": "git",
-    "url": "git://github.com/arildwtv/mozaik-ext-value"
+    "url": "git://github.com/arildwtv/mozaik-ext-list"
   },
   "license": "MIT",
   "author": {
@@ -15,12 +15,10 @@
     "node": ">=0.12.x",
     "npm": ">=3.0.0"
   },
-  "homepage": "https://github.com/arildwtv/mozaik-ext-value",
+  "homepage": "https://github.com/arildwtv/mozaik-ext-list",
   "main": "./src/components/index.js",
   "keywords": [
-    "value",
-    "rate",
-    "current",
+    "list",
     "widget",
     "extension",
     "dashboard"

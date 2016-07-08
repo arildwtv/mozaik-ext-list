@@ -1,5 +1,5 @@
-import Value from './Value.jsx';
+import List from './List.jsx';
 
 export default {
-    Value
+    List
 };

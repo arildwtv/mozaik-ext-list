@@ -1,8 +1,8 @@
-# Mozaïk value widgets
+# Mozaïk list widgets
 
 [![NPM version][npm-image]][npm-url]
 
-## Value Widget Configuration
+## List Widget Configuration
 
 ### Api Configuration
 
@@ -14,13 +14,9 @@ No API configuration is needed.
 {
   // ...
   {
-    type:               'value.value',
-    url:                'https://dl.dropboxusercontent.com/u/19253297/test.json',
-    pathCurrent:        '$.current', /* optional */
-    pathLastUpdated:    '$.lastUpdated', /* optional */
-    pathChangeRate:     '$.changeRate', /* optional */
-    prefix:             '$', /* optional */
-    postfix:            'ca$h', /* optional */
+    type:               'list.list',
+    url:                'https://dl.dropboxusercontent.com/u/19253297/test2.json',
+    pathText:           '$..summary',
     columns: 2, rows: 1,
     x: 1, y: 0
   }
@@ -32,8 +28,4 @@ No API configuration is needed.
 key              | required | description
 -----------------|----------|-------------------------------------------------------------------
 `url`            | yes      | *The URL to fetch the value*
-`prefix`         | no       | *Prefix of the value*
-`postfix`        | no       | *Postfix of the value*
-`pathCurrent`    | no       | *The JSON path to the 'current' value
-`pathLastUpdated`| no       | *The JSON path to the 'lastUpdated' value
-`pathChangeRate` | no       | *The JSON path to the 'changeRate' value
+`pathText`       | yes      | *The JSON path to the text to show per item
