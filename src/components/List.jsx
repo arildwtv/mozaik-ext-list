@@ -7,13 +7,14 @@ class List extends Component {
 
     getApiRequest() {
         const {
+            title,
             url,
             pathText
         } = this.props;
 
         return {
-            id: `list.list.${url}.${pathText}`,
-            params: { url, pathText }
+            id: `list.list.${title}.${url}.${pathText}`,
+            params: { url, title, pathText }
         };
     }
 
@@ -24,12 +25,13 @@ class List extends Component {
     render() {
         const state = this.state || {};
         const { items = [] } = state;
+        const { title } = this.props;
 
         return (
             <div>
                 <div className="widget__header">
-                    Hello <span className="widget__header__subject">World!</span>
-                    <i className="fa fa-github-alt" />
+                    List <span className="widget__header__subject">{title}</span>
+                    <i className="fa fa-list" />
                 </div>
                 <div className="widget__body">
                     <div className="list__wrapper">

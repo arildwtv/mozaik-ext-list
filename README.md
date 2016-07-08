@@ -15,6 +15,7 @@ No API configuration is needed.
   // ...
   {
     type:               'list.list',
+    title:              'Your List',
     url:                'https://dl.dropboxusercontent.com/u/19253297/test2.json',
     pathText:           '$..summary',
     columns: 2, rows: 1,
@@ -28,4 +29,5 @@ No API configuration is needed.
 key              | required | description
 -----------------|----------|-------------------------------------------------------------------
 `url`            | yes      | *The URL to fetch the value*
+`title`          | yes      | *The title of your widget*
 `pathText`       | yes      | *The JSON path to the text to show per item
