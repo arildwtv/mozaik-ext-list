@@ -37,7 +37,10 @@ class List extends Component {
                     <div className="list__wrapper">
                         <ul className="list__list">
                             {items.map((item, index) =>
-                                <li className="list__list-item" key={index}>{item}</li>
+                                <li className="list__list-item" key={index}>
+                                    <i className="fa fa-circle-o list__list-item-icon" />
+                                    {item}
+                                </li>
                             )}
                         </ul>
                     </div>

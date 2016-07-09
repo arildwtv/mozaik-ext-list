@@ -3,6 +3,22 @@
     width  100%
     height 100%
 
+  &__list
+    padding 0
+    list-style-type none
+    margin 0
+
+  &__list-item
+    padding 1rem
+    border-bottom 1px solid #1f2831
+
+  &__list-item-icon
+    color #52606f
+
+  &__list-item-icon::after
+    content '\00a0\00a0\00a0'
+
+
   &__text-failed
     color $failure-color
 
